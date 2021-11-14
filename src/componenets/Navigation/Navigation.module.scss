@@ -1,0 +1,40 @@
+@import '../../styles/breakpoints.scss';
+
+.link {
+  display: none;
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.17;
+
+  color: #370101;
+
+  @media screen and (min-width: $tablet) {
+    display: inline-block;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.activeLink {
+  color: #370101;
+}
+
+.link:hover,
+.link:focus {
+  cursor: pointer;
+
+  text-decoration: underline;
+  color: rgb(222, 222, 222);
+}
+
+.link + .link {
+  margin-left: 20px;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 50px;
+  }
+}

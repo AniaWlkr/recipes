@@ -1,0 +1,54 @@
+@import '../../styles/breakpoints.scss';
+
+.page {
+  padding-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 50px;
+  }
+
+  @media screen and (min-width: $desktopL) {
+    padding-top: 70px;
+  }
+}
+
+.buttons {
+  margin-top: 10px;
+  width: 300px;
+
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: $tablet) {
+    width: 390px;
+  }
+}
+
+.button {
+  width: 145px;
+  height: 45px;
+
+  cursor: pointer;
+
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+
+  font-size: 18px;
+  line-height: 1.17;
+
+  background-color: #ce706a;
+  border-radius: 5px;
+  border-color: rgb(222, 222, 222);
+
+  @media screen and (min-width: $tablet) {
+    width: 190px;
+  }
+}
+
+.button:hover {
+  color: rgb(222, 222, 222);
+}

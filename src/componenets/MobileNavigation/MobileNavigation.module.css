@@ -1,0 +1,55 @@
+.menuList {
+  list-style: none;
+
+  width: 320px;
+  height: 300px;
+
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  background-color: #ddb0a3;
+
+  font-size: 18px;
+  line-height: 1.17;
+}
+
+.menuItem {
+  margin-bottom: 20px;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.17;
+
+  color: #370101;
+}
+
+.activeLink {
+  color: #370101;
+}
+
+.link:hover,
+.link:focus {
+  cursor: pointer;
+
+  text-decoration: underline;
+  color: rgb(222, 222, 222);
+}
+
+.menuButton {
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+
+  color: #370101;
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.17;
+}

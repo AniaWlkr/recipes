@@ -1,0 +1,111 @@
+@import '../../styles/breakpoints.scss';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+
+  height: 60px;
+
+  background-color: #ce706a;
+  border-bottom: 4px ridge rgb(235, 234, 234);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.17;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 18px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  // font-size: 18px;
+  // line-height: 1.17;
+
+  color: #370101;
+}
+
+.activeLink {
+  color: #370101;
+}
+
+.link:hover,
+.link:focus {
+  cursor: pointer;
+
+  color: rgb(222, 222, 222);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImg {
+  margin-right: 10px;
+  height: 40px;
+}
+
+.logoName {
+  font-family: 'Praise', cursive;
+  font-size: 25px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 35px;
+  }
+}
+
+.addDishButton {
+  display: none;
+
+  height: 37px;
+  width: 150px;
+
+  @media screen and (min-width: $desktop) {
+    height: 40px;
+    width: 190px;
+  }
+}
+
+.addDishButton:hover,
+.burgerMenuIcon:hover {
+  color: rgb(222, 222, 222);
+}
+
+.addDishButton,
+.burgerMenuIcon {
+  cursor: pointer;
+
+  background-color: #ddb0a3;
+  border-radius: 5px;
+  border-color: rgb(222, 222, 222);
+
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+}
+
+.burgerMenuIcon {
+  height: 37px;
+  width: 37px;
+
+  color: #370101;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .addDishButton {
+    display: block;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../styles/breakpoints.scss';
+
+.card {
+  width: 300px;
+
+  @media screen and (min-width: $tablet) {
+    width: 340px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 310px;
+  }
+
+  @media screen and (min-width: $desktopL) {
+    width: 390px;
+  }
+}
+
+.img {
+  width: 100%;
+}
+
+.mealTitle {
+  padding-top: 35px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.title {
+  padding: 20px 0 15px;
+}
+
+.table {
+  table-layout: fixed;
+  width: 100%;
+
+  font-size: 18px;
+  line-height: 1.39;
+}
+
+.ingredient {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.measure {
+  padding-right: 10px;
+  text-align: right;
+}
+
+.instructions {
+  font-size: 18px;
+  line-height: 1.39;
+
+  text-align: justify;
+}
