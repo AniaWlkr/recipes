@@ -24,6 +24,14 @@
   justify-content: space-between;
 
   @media screen and (min-width: $tablet) {
+    width: 340px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 310px;
+  }
+
+  @media screen and (min-width: $desktopL) {
     width: 390px;
   }
 }
@@ -45,6 +53,14 @@
   border-color: rgb(222, 222, 222);
 
   @media screen and (min-width: $tablet) {
+    width: 165px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 150px;
+  }
+
+  @media screen and (min-width: $desktopL) {
     width: 190px;
   }
 }
