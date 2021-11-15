@@ -16,8 +16,7 @@ const MobileNavigation = ({ toggleAddModal, toggleMenuModal }) => {
         <NavLink
           to={routes.home}
           onClick={toggleMenuModal}
-          className={styles.link}
-          activeClassName={styles.activeLink}
+          className={isActive => (isActive ? styles.link : styles.activeLink)}
         >
           Random dish
         </NavLink>
@@ -26,8 +25,7 @@ const MobileNavigation = ({ toggleAddModal, toggleMenuModal }) => {
         <NavLink
           to={routes.favourites}
           onClick={toggleMenuModal}
-          className={styles.link}
-          activeClassName={styles.activeLink}
+          className={isActive => (isActive ? styles.link : styles.activeLink)}
         >
           Favourites
         </NavLink>

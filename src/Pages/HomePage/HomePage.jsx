@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import apiService from '../../utils/apiService';
+import Loader from '../../componenets/Loader';
 import Button from '../../componenets/Button';
 import RecipeCard from '../../componenets/RecipeCard/RecipeCard';
 import { addFavouriteToLS } from '../../utils/addFavouriteToLS';
@@ -8,6 +9,7 @@ import styles from './HomePage.module.scss';
 class HomePage extends Component {
   state = {
     recipe: {},
+    isLoading: false,
   };
 
   componentDidMount() {
@@ -15,7 +17,9 @@ class HomePage extends Component {
   }
 
   fetchRecipe() {
+    this.setState({ isLoading: true });
     apiService.getRecipe().then(([data]) => this.setState({ recipe: data }));
+    // this.setState({ isLoading: false });
   }
 
   onSkipBtnClick = event => {
@@ -29,12 +33,15 @@ class HomePage extends Component {
 
     const { recipe } = this.state;
     addFavouriteToLS(recipe);
+
+    this.fetchRecipe();
   };
 
   render() {
-    const { recipe } = this.state;
+    const { recipe, isLoading } = this.state;
     return (
       <div className={styles.page}>
+        {isLoading && <Loader />}
         <RecipeCard recipe={recipe} />
         <div className={styles.buttons}>
           <Button

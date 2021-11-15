@@ -1,13 +1,11 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import favouritesReducer from './favourites/favouritesReducer';
-
-const middleware = [...getDefaultMiddleware({})];
 
 const store = configureStore({
   reducer: {
     favourites: favouritesReducer,
   },
-  middleware,
+  middleware: getDefaultMiddleware => getDefaultMiddleware(),
   devTools: process.env.NODE_ENV === 'development',
 });
 

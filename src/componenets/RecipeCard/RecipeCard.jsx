@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import getIngredients from './getIngredients';
 import styles from './RecipeCard.module.scss';
-import placeholder from '../images/placeholder.png';
+import placeholder from '../../assets/images/placeholder.png';
 
 const RecipeCard = ({ recipe }) => {
   const { strMeal, strCategory, strInstructions, strMealThumb } = recipe;

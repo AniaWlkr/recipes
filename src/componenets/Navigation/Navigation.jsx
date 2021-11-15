@@ -7,15 +7,13 @@ const Navigation = () => {
     <div>
       <NavLink
         to={routes.home}
-        className={styles.link}
-        activeClassName={styles.activeLink}
+        className={isActive => (isActive ? styles.link : styles.activeLink)}
       >
         Random dish
       </NavLink>
       <NavLink
         to={routes.favourites}
-        className={styles.link}
-        activeClassName={styles.activeLink}
+        className={isActive => (isActive ? styles.link : styles.activeLink)}
       >
         Favourites
       </NavLink>

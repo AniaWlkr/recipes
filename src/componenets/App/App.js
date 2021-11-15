@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router';
-import AppBar from '../componenets/AppBar';
-import Container from '../componenets/Container';
-import routes from '../componenets/routes';
-import HomePage from '../Pages/HomePage';
-import FavouritesPage from '../Pages/FavouritesPage';
+import AppBar from '../AppBar';
+import Container from '../Container';
+import routes from '../routes';
+import HomePage from '../../Pages/HomePage';
+import FavouritesPage from '../../Pages/FavouritesPage';
 
 function App() {
   return (

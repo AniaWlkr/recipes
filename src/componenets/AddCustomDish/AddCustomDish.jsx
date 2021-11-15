@@ -31,6 +31,9 @@ const AddCustomDish = ({ toggleModal }) => {
   const handleSubmit = event => {
     event.preventDefault();
 
+    if (!title.trim() || !description.trim())
+      return alert('Not enough data for record');
+
     const newCustomDish = {
       idMeal: uuidv4(),
       strMeal: title,

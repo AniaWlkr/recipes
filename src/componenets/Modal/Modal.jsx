@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
 import styles from './Modal.module.scss';
 import IconButton from '../IconButton';
-import { ReactComponent as CloseIcon } from '../../componenets/icons/cross.svg';
+import { ReactComponent as CloseIcon } from '../../assets/icons/cross.svg';
 
 const modalRoot = document.querySelector('#modal-root');
 

@@ -7,8 +7,8 @@ import Modal from '../../componenets/Modal';
 import AddCustomDish from '../../componenets/AddCustomDish/AddCustomDish';
 import MobileNavigation from '../../componenets/MobileNavigation';
 import routes from '../../componenets/routes';
-import logo from '../images/recipe-book.png';
-import { ReactComponent as BurgerMenu } from '../icons/hamburgerMenu.svg';
+import logo from '../../assets/images/recipe-book.png';
+import { ReactComponent as BurgerMenu } from '../../assets/icons/hamburgerMenu.svg';
 import styles from './AppBar.module.scss';
 
 const AppBar = () => {
@@ -38,8 +38,7 @@ const AppBar = () => {
     <header className={styles.header}>
       <NavLink
         to={routes.home}
-        className={styles.link}
-        activeClassName={styles.activeLink}
+        className={isActive => (isActive ? styles.link : styles.activeLink)}
       >
         <div className={styles.logo}>
           <img src={logo} alt="Recipe-book logo" className={styles.logoImg} />

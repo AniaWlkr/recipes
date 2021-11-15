@@ -4,7 +4,6 @@ import {
 } from './favouritesActions';
 
 const getFavouritesOperation = () => dispatch => {
-  console.log('getFavouritesOperations');
   try {
     const data = JSON.parse(localStorage.getItem('favourites'));
 
