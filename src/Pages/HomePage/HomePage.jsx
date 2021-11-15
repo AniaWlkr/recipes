@@ -19,7 +19,7 @@ class HomePage extends Component {
   fetchRecipe() {
     this.setState({ isLoading: true });
     apiService.getRecipe().then(([data]) => this.setState({ recipe: data }));
-    // this.setState({ isLoading: false });
+    this.setState({ isLoading: false });
   }
 
   onSkipBtnClick = event => {
